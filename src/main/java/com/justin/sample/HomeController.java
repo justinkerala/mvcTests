@@ -6,12 +6,14 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
  
 /**
@@ -39,9 +41,10 @@ public class HomeController {
 		return "home";
 	}
 	@RequestMapping(method = RequestMethod.POST)
-	public String submitForm(Locale locale, Model model) {
+	public String submitForm(Locale locale, Model model,@RequestParam("uname") String uname,@RequestParam("passWrd") String pwd) {
 		String returnVal = "success";
-		model.addAttribute("name", "Justin");
+		 
+		model.addAttribute("name", uname);
 		return "Success";
 	}
 	

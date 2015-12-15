@@ -43,8 +43,8 @@
   <div class="form">
     <h2>Login to your account</h2>
     <form:form method="POST">
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
+      <input type="text" placeholder="Username" name="uname"/>
+      <input type="password" placeholder="Password" name="passWrd"/>
       <button>Login</button>
     </form:form>
   </div>
