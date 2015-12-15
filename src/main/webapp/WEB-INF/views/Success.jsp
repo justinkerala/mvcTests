@@ -7,6 +7,7 @@
 <title>Login Success</title>
 </head>
 <body>
-
+    <h2>Congrats ${name}!</h2>
+ 
 </body>
 </html>

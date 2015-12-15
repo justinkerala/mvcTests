@@ -3,6 +3,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <html >
   <head>
     <meta charset="UTF-8">
@@ -40,11 +42,11 @@
   </div>
   <div class="form">
     <h2>Login to your account</h2>
-    <form>
+    <form:form method="POST">
       <input type="text" placeholder="Username"/>
       <input type="password" placeholder="Password"/>
       <button>Login</button>
-    </form>
+    </form:form>
   </div>
   <div class="form">
     <h2>Create an account</h2>
